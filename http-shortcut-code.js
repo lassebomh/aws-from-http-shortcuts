@@ -4,7 +4,7 @@ const service = 'ec2'
 const host = 'ec2.amazonaws.com'
 const region = 'us-east-1'
 const endpoint = 'https://ec2.amazonaws.com'
-const request_parameters = 'Action=DescribeRegions&Version=2013-10-15'
+const request_parameters = 'Version=2013-10-15&Action=DescribeRegions'
 
 function sign(key, msg) {
     return hmac('sha256', key, msg)

@@ -29,3 +29,7 @@ Create a Multi-Shortcut that triggers the first and second shortcut we created (
 
 # Testing on a desktop
 `npm run start` runs the example with polyfills for missing functions. Variables are polyfilled with environment variables - so set `AWS_SECRET_ACCESS_KEY` and `AWS_ACCESS_KEY_ID` before running.
+
+# Common mistakes
+ - The order of the url params is critical. If it isn't correct it will give you this misleading error: `AuthFailure: AWS was not able to validate the provided access credentials`
+ - All requests require the `Version` url param (as the last param). If you're unsure then `Version=2016-11-15` will probably work.
