@@ -1,0 +1,25 @@
+{
+  "name": "ec2-from-http-shortcuts",
+  "version": "1.0.0",
+  "description": "This is a template to create canonical AWS requests with [JavaScript macros](https://http-shortcuts.rmy.ch/scripting) in the app [HTTP Shortcuts](https://http-shortcuts.rmy.ch/scripting#text-processing).",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lassebomh/ec2-from-http-shortcuts.git"
+  },
+  "keywords": [],
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lassebomh/ec2-from-http-shortcuts/issues"
+  },
+  "homepage": "https://github.com/lassebomh/ec2-from-http-shortcuts#readme",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "node-fetch": "^3.0.0"
+  }
+}
