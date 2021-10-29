@@ -11,7 +11,6 @@
     "url": "git+https://github.com/lassebomh/ec2-from-http-shortcuts.git"
   },
   "keywords": [],
-  "type": "module",
   "author": "",
   "license": "ISC",
   "bugs": {
