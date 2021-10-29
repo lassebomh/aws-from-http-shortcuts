@@ -1,5 +1,5 @@
-// Do not include this in the HTTP Shortcut
-import { showToast, getVariable, hash, hmac, toHexString } from './polyfill.js'
+// Do not include the imports in the HTTP Shortcut
+import { showToast, getVariable, setVariable, hash, hmac, toHexString } from './polyfill.js'
 import fetch from 'node-fetch';
 
 const method = 'GET'
@@ -49,17 +49,21 @@ const credential_scope = datestamp + '/' + region + '/' + service + '/' + 'aws4_
 const string_to_sign = algorithm + '\n' +  amzdate + '\n' +  credential_scope + '\n' +  hash('sha256', canonical_request)
 
 const signing_key = getSignatureKey(secret_key, datestamp, region, service)
-
 const signature = toHexString(hmac('sha256', signing_key, string_to_sign))
 
 const authorization_header = algorithm + ' ' + 'Credential=' + access_key + '/' + credential_scope + ', ' +  'SignedHeaders=' + signed_headers + ', ' + 'Signature=' + signature
 
-const headers = {'x-amz-date':amzdate, 'Authorization':authorization_header}
-
 const request_url = endpoint + '?' + canonical_querystring
 
-const response = fetch(request_url, {
-    method: method,
-    // body: '',
-    headers: headers,
-}).then((data) => data.text().then((text) => console.log(text)))
+setVariable("AWS_REQUEST_AMZDATE", amzdate)
+setVariable("AWS_REQUEST_AUTHORIZATION", authorization_header)
+setVariable("AWS_REQUEST_URL", request_url)
+
+// const response = fetch(request_url, {
+//     method: method,
+//     // body: '',
+//     headers: {
+//         'x-amz-date':amzdate,
+//         'Authorization':authorization_header
+//     },
+// }).then((data) => datathis.text().then((text) => console.log(text)))
