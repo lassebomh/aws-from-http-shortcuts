@@ -8,15 +8,15 @@ Go into your IAM and get your secret access key and access key ID. Running the c
 
 ## Create 5 static variables
 You will need 5 static variables called:
- - AWS_SECRET_ACCESS_KEY
- - AWS_ACCESS_KEY_ID
- - AWS_REQUEST_URL
- - AWS_REQUEST_AUTHORIZATION
- - AWS_REQUEST_AMZDATE
+ - `AWS_SECRET_ACCESS_KEY`
+ - `AWS_ACCESS_KEY_ID`
+ - `AWS_REQUEST_URL`
+ - `AWS_REQUEST_AUTHORIZATION`
+ - `AWS_REQUEST_AMZDATE`
 
-Set `AWS_SECRET_ACCESS_KEY` and `AWS_ACCESS_KEY_ID` to your credentials.
+Set `AWS_SECRET_ACCESS_KEY` and `AWS_ACCESS_KEY_ID` to the credentials that you retrieved from the previous step.
 
-## Create a Shortcut to create the request
+## Create a Shortcut to make the request
 Create a script shortcut and insert the code from `http-shortcut-code.js`. This shortcut will set the `AWS_REQUEST` variables.
 
 ## Create a Shortcut to send the request
