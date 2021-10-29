@@ -4,7 +4,7 @@ This is a template to create canonical AWS requests with [JavaScript macros](htt
 # Setup
 
 ## Get AWS credentials
-Go into your IAM and get your secret access key and access key ID. Running the current example without modification requires that the user has access to EC2.
+Go into your IAM and get your secret access key and access key ID. Running the current example without modification requires that the user has access to EC2. We will be running the `DescribeRegions` action that displays all available regions.
 
 ## Create 5 static variables
 You will need 5 static variables called:
